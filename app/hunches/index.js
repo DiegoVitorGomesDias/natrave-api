@@ -85,7 +85,7 @@ export const getHunchesFromUser = async (ctx) =>
     try
     {
         const user = await prisma.user.findUnique({ where: { username } });
-        const hunches = await prisma.hunch.findMany({ where: { userId: user.id } });
+        const hunches = await prisma.hunch.findMany({ where: { userId: user?.id } });
         ctx.body = hunches;
         ctx.status = 200;
     } 
