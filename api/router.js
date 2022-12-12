@@ -6,11 +6,6 @@ import * as games from "./games/index.js";
 
 export const router = new Router();
 
-router.get("/", async ctx => 
-{
-    ctx.body = '<h1>Teste</h1>';
-});
-
 router.get("/login", users.login);
 router.get("/users", users.getUsers);
 router.post("/users", users.createUser);
