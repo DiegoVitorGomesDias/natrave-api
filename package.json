@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "API para World Cup",
-  "main": "server.js",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
     "start": "node api/index.js"
