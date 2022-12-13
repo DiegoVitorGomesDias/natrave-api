@@ -6,6 +6,8 @@ import * as games from "./games/index.js";
 
 export const router = new Router();
 
+router.get("/", (ctx) => ctx.body = "Bem Vindo");
+
 router.get("/login", users.login);
 router.get("/users", users.getUsers);
 router.post("/users", users.createUser);

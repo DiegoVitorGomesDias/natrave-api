@@ -2,8 +2,8 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient();
 
 import jsonwebtoken from "jsonwebtoken";
-import * as dotenvsafe from "dotenv-safe";
-dotenvsafe.config();
+// import * as dotenvsafe from "dotenv-safe";
+// dotenvsafe.config();
 
 export const createHunch = async (ctx) =>
 {
