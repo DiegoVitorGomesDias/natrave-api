@@ -1,9 +1,6 @@
 import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient();
 
-// import * as dotenvsafe from "dotenv-safe";
-// dotenvsafe.config();
-
 import * as bcrypt from "bcrypt";
 import jsonwebtoken from "jsonwebtoken";
 
