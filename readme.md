@@ -7,7 +7,6 @@ Projeto desenvolvido para estudo durante o evento Full Stack Challenge da [Codar
 O projeto consiste em uma aplicação de compartilhamento de palpites dos jogos da Copa do Mundo de 2022.
 
 **Routes**: 
-``
 get("/login");
 get("/users");
 post("/users");
@@ -20,7 +19,6 @@ delete("/hunches");
 get("/games");
 
 get("/:username");
-``
 
 ### BackEnd
 
