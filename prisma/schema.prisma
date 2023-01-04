@@ -18,10 +18,8 @@ model User {
   email String @unique
   username String @unique
   password String
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
   hunches Hunch[]
 }
 
@@ -30,12 +28,9 @@ model Game {
   homeTeam String
   awayTeam String
   gameTime DateTime
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
   hunches Hunch[]
-
   @@unique([homeTeam, awayTeam, gameTime])
 }
 
@@ -43,15 +38,12 @@ model Hunch {
   id    String  @id @default(cuid())
   homeTeamScore Int
   awayTeamScore Int
-
   user User @relation(fields: [userId], references: [id])
   userId String
-
   game Game @relation(fields: [gameId], references: [id])
-  gameId String
-  
+  gameId String  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
   @@unique([userId, gameId])
+  @@index([gameId])
 }
